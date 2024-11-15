@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="card shadow-sm p-4">
+            <h1 class="card-title text-center text-danger">Postni o'chirish</h1>
+            <form action="" method="post">
+                {% csrf_token %}
+                <p class="text-center mt-3">Siz "{{ article.title }}" nomli postni o'chirishni istaysizmi?</p>
+                <div class="text-center mt-4">
+                    <button class="btn btn-danger" type="submit">Ha, o'chirish</button>
+                    <a href="{% url 'article_list' %}" class="btn btn-secondary ml-2">Bekor qilish</a>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

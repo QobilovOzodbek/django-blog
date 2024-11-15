@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="card shadow-sm p-4">
+            <h1 class="card-title mb-4 text-center">Postni tahrirlash</h1>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.media }}
+                <div class="mb-3">
+                    {{ form|crispy }}
+                </div>
+                <div class="text-center mt-4">
+                    <button class="btn btn-info" type="submit">Saqlash</button>
+                    <a href="{% url 'article_list' %}" class="btn btn-secondary ml-2">Bekor qilish</a>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

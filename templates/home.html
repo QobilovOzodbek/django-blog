@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Bosh sahifa{% endblock title %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="jumbotron bg-primary text-white p-5 shadow-lg rounded">
+            <h1 class="display-4">Assalom alaykum!</h1>
+            <p class="lead">Kiber Pro blogiga xush kelibsiz.</p>
+            <hr class="my-4 bg-light">
+            <p>Bu blog orqali dasturlash olamidagi yangiliklardan xabardor bo'lib turasiz va dasturlash sirlarini o'rganishingiz mumkin.</p>
+            <p class="lead">
+                <a class="btn btn-light btn-lg" href="{% url 'article_list' %}" role="button">Postlarni ko'rish</a>
+            </p>
+        </div>
+    </div>
+{% endblock content %}
